@@ -66,7 +66,7 @@ cd server
 npm run dev
 ```
 
-### Client
+### Clientside
 ```bash
 cd clientside
 npm run dev
