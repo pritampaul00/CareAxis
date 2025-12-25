@@ -4,8 +4,6 @@ CareAxis is a full-stack healthcare appointment booking platform that enables
 patients to book doctor appointments, doctors to manage schedules, and admins
 to oversee the system.
 
----
-
 ## 🚀 Tech Stack
 
 ### Frontend
@@ -21,15 +19,15 @@ to oversee the system.
 
 ### Payments
 - Razorpay
----
+
 
 ## 📂 Project Structure
-
+```bash
 CareAxis/
 ├── admin/
 ├── clientside/
 ├── server/
-
+```
 
 ## ⚙️ Environment Setup
 
@@ -41,7 +39,6 @@ Create `.env` files using the provided `.env.example` files:
 
 Copy each `.env.example` to `.env` and fill in the required values.
 
----
 
 ## ▶️ How to Run Locally
 
