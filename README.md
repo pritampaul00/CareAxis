@@ -1,4 +1,4 @@
-ve# CareAxis 🏥
+# CareAxis 🏥
 
 CareAxis is a full-stack healthcare appointment booking platform that enables
 patients to book doctor appointments, doctors to manage schedules, and admins
