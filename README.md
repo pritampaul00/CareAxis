@@ -1,81 +1,139 @@
-# CareAxis 🏥
+# CareAxis: Hospital Booking System
 
-CareAxis is a full-stack healthcare appointment booking platform that enables
-patients to book doctor appointments, doctors to manage schedules, and admins
-to oversee the system.
+CareAxis is a full-stack healthcare platform where patients book appointments, doctors manage their schedules, and admins control the entire system — all from a single integrated application.
 
-
-## ✨ Features
-- Role-based authentication (Admin / Doctor / Patient)
-- Doctor appointment booking
-- Secure online payments
-- Admin & Doctor dashboards
-- RESTful API architecture
+**Three roles. One platform.**
+- Patients: browse doctors, book slots, pay online
+- Doctors: view and manage appointment schedules
+- Admins: oversee users, doctors, and platform activity
   
+---
 
-## 🚀 Tech Stack
+## Live Demo  
 
-### Frontend
-- React (Vite)
-- Tailwind CSS
-- Context API
+- Live App: https://care-axis.vercel.app/
+  
+---
+## Core Features
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- JWT Authentication
+- Role-based auth (Admin / Doctor / Patient) via JWT
+- Doctor discovery and appointment booking
+- Secure online payments via Razorpay
+- Dedicated dashboards for Admin and Doctor roles
+- RESTful API with clean separation of concerns
 
-### Payments
-- Razorpay
+  ---
 
+## Tech Stack
 
-## 📂 Project Structure
-```bash
+| Layer     | Technology                        |
+|-----------|-----------------------------------|
+| Frontend  | React (Vite), Tailwind CSS        |
+| Backend   | Node.js, Express.js               |
+| Database  | MongoDB                           |
+| Auth      | JWT                               |
+| Payments  | Razorpay                          |
+| State     | Context API                       |
+
+---
+
+## Project Structure
+
+```
 CareAxis/
-├── admin/
-├── clientside/
-├── server/
+├── admin/          # Admin dashboard (React + Vite)
+├── clientside/     # Patient-facing app (React + Vite)
+└── server/         # REST API (Node.js + Express)
 ```
 
+---
 
-## ⚙️ Environment Setup
+## Getting Started
 
-Create `.env` files using the provided `.env.example` files:
+### Prerequisites
 
-- `server/.env.example`
-- `clientside/.env.example`
-- `admin/.env.example`
+- Node.js v18+
+- MongoDB instance (local or Atlas)
+- Razorpay account (for payment keys)
 
-Copy each `.env.example` to `.env` and fill in the required values.
+### 1. Clone the repo
 
+```bash
+git clone https://github.com/your-username/CareAxis.git
+cd CareAxis
+```
 
+### 2. Set up environment variables
 
-## ▶️ How to Run Locally
+Each sub-app has its own `.env.example`. Copy and fill them in:
 
-### 1️⃣ Install dependencies
+```bash
+cp server/.env.example server/.env
+cp clientside/.env.example clientside/.env
+cp admin/.env.example admin/.env
+```
+
+Key variables in `server/.env`:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+```
+
+### 3. Install dependencies
+
 ```bash
 cd server && npm install
 cd ../clientside && npm install
 cd ../admin && npm install
 ```
-### 2️⃣ Start the servers
-### Backend
+
+### 4. Run the application
+
+Open three terminal tabs:
+
 ```bash
-cd server
-npm run server
+# Terminal 1 — Backend
+cd server && npm run server
+
+# Terminal 2 — Patient app
+cd clientside && npm run dev
+
+# Terminal 3 — Admin panel
+cd admin && npm run dev
 ```
 
-### Clientside
-```bash
-cd clientside
-npm run dev
-```
+---
 
-### Admin
-```bash
-cd admin
-npm run dev
-```
+## API Overview
 
+| Method | Endpoint              | Description              | Access  |
+|--------|-----------------------|--------------------------|---------|
+| POST   | /api/auth/register    | Register a new user      | Public  |
+| POST   | /api/auth/login       | Login and get JWT        | Public  |
+| GET    | /api/doctors          | List all doctors         | Patient |
+| POST   | /api/appointments     | Book an appointment      | Patient |
+| GET    | /api/appointments     | View appointments        | Doctor  |
+| GET    | /api/admin/users      | Manage all users         | Admin   |
 
+<!-- Expand with full routes or link to Postman collection -->
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request
+
+---
+
+## Contact
+
+Pritam Paul  
+Email: pritampaul.10000@gmail.com  
+GitHub: https://github.com/pritampaul00
