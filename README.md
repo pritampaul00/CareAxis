@@ -118,6 +118,7 @@ cd admin && npm run dev
 ---
 
 ## Contact
-**Pritam Paul**
-Email: pritampaul.10000@gmail.com
+
+Pritam Paul  
+Email: pritampaul.10000@gmail.com  
 GitHub: https://github.com/pritampaul00
