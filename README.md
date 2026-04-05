@@ -1,4 +1,4 @@
-# CareAxis: Hospital_Management_System 
+# CareAxis: Hospital Management System 
 
 **CareAxis** is a **full-stack healthcare platform** where **patients book appointments**, **doctors manage schedules**, and **admins control the entire system**, all from a **single integrated application**.
 
