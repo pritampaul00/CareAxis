@@ -15,18 +15,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
 
-// 19-03-2026
-// app.use(cors({
-//   origin: process.env.CLIENT_URL,
-//   credentials: true
-// }));
-
+19-03-2026
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://your-client.vercel.app",
-    "https://your-admin.vercel.app"
-  ],
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
 
