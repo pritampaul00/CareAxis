@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
 
-19-03-2026
 app.use(cors({
   origin: process.env.CLIENT_URL,
   credentials: true
